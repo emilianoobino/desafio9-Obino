@@ -5,9 +5,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/app.js --mode desarrollo",
-    "start": "node src/app.js --mode produccion"
-  },
+  "dev": "npm run nodemon-dev",
+  "nodemon-dev": "nodemon src/app.js --mode desarrollo",
+  "watch-dev": "node --watch src/app.js",
+  "start": "node src/app.js --mode produccion"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

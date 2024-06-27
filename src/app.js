@@ -16,6 +16,7 @@ import viewsRouter from "./routes/views.router.js";
 import userRouter from "./routes/user.router.js";
 import checkoutRouter from './routes/checkout.router.js';
 import SocketManager from "./sockets/socketmanager.js";
+import checkUserRole from './middleware/checkrole.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -52,6 +53,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+//app.use(checkUserRole);
 
 // Handlebars
 app.engine("handlebars", exphbs.engine());
